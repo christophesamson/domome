@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var mock_radiateur = require('./mock_radiateur/mock_radiateur');
 var radiateur = require('./routes/radiateur');
 var controlChauffage=require('./routes/controleChauffage');
 
@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/mock_radiateur', mock_radiateur);
 app.use('/radiateur',radiateur);
 app.use('/controlchauffage',controlChauffage);
 

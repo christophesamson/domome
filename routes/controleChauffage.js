@@ -19,7 +19,7 @@ prog.label='normal';
 chaine=JSON.stringify(prog);
 fs.writeFileSync("./json/prog",chaine,'UTF-8');
 
-/* GET users listing. */
+/* GET mock_radiateur listing. */
 router.get('/', function(req, res, next) {
     res.send('OK');
 });
